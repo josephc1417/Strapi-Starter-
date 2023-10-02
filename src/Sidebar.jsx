@@ -1,15 +1,15 @@
 import { useGlobalContext } from "./Context"
 import sublinks from "./data"
-import { FaBars } from "react-icons/fa"
+import { FaTimes} from "react-icons/fa"
 
 
 const Sidebar = () => {
   const {isSidebarOpen, openSidebar} = useGlobalContext()
   return (
-    <aside >
+    <aside className="sidebar1"  >
       <div className="sidebar-container">
         <button className="close-btn" onClick={openSidebar}>
-          <FaBars/>
+          <FaTimes/>
         </button>
         <div className="sidebar-links">
           {sublinks.map((item) => {
