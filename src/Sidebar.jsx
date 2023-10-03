@@ -4,11 +4,11 @@ import { FaTimes} from "react-icons/fa"
 
 
 const Sidebar = () => {
-  const {isSidebarOpen, openSidebar} = useGlobalContext()
+  const {isSidebarOpen, closeSidebar} = useGlobalContext()
   return (
-    <aside className="sidebar1"  >
+    <aside className={isSidebarOpen ? "sidebar1 show-sidebar" : "sidebar1"}  >
       <div className="sidebar-container">
-        <button className="close-btn" onClick={openSidebar}>
+        <button className="close-btn" onClick={closeSidebar}>
           <FaTimes/>
         </button>
         <div className="sidebar-links">
@@ -36,5 +36,6 @@ const Sidebar = () => {
   </aside>
   )
 }
+
 
 export default Sidebar
