@@ -355,32 +355,6 @@ nav {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 ============= 
 Sidebar
@@ -418,6 +392,7 @@ visibility: hidden;
   position:absolute;
   top:1rem;
   right:1rem;
+  cursor:pointer;
 }
 
 .sidebar1 article {
@@ -446,47 +421,48 @@ align-items:center
 .sidebar-sublinks svg {
   color:var(--grey-500)
 }
-@media screen and (min-width:992px){
-  .sidebar{
-    display:none;
-  }
-}
+
 
 
 
 /* 
 ============= 
-Nav Links
+Nav Links 
 =============== 
 */
-.nav-links {
-  display: none;
+.nav-links{
+  display:none;
 }
-@media screen and (min-width: 992px) {
-  .nav-links {
-    display: flex;
-    justify-content: center;
 
-    align-self: stretch;
+@media screen and (min-width:992px){
+  .nav-links {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    column-gap:1rem;
+    /* border:2px solid red; */
+    ;
   }
   .nav-center {
-    align-self: stretch;
-    
+    display:grid;
     grid-template-columns: auto 1fr;
+    /* border:2px solid green; */
   }
-  .nav-link {
-    padding: 0 1rem;
-    color: var(--white);
-    background: transparent;
-    border-color: transparent;
-    font-size: 1.25rem;
-    text-transform: capitalize;
-    letter-spacing: var(--letterSpacing);
-    cursor: pointer;
+  .nav-link{
+    padding:0 1rem;
+    color:var(--white);
+    background:transparent;
+    border-color:transparent;
+    text-transform:capitalize;
+    letter-spacing:var(--letterSpacing);
+    font-size: 1.2rem;
+    cursor:pointer;
+    /* border:2px solid yellow; */
   }
 }
+/*
 
-/* 
+
 ============= 
 Submenu
 =============== 
