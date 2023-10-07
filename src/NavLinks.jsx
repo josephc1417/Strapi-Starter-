@@ -1,14 +1,14 @@
 import sublinks from './data'
 import { useGlobalContext } from './Context'
 const NavLinks = () => {
-  const {setPageID} = useGlobalContext()
+  const {setPageId} = useGlobalContext()
   return (
     <div className='nav-links'>
       
       {sublinks.map((link) => {
         const {pageId,page} = link
         return(
-        <button key={pageId} onMouseEnter={() => setPageID(pageId)} className='nav-link'>{page}</button>
+        <button key={pageId} onMouseEnter={() => setPageId(pageId)} className='nav-link'>{page}</button>
         )
       })}
     </div>

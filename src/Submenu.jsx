@@ -4,15 +4,25 @@ import sublinks from "./data"
 
 
 const Submenu = () => {
-  const {pageID} = useGlobalContext()
-  const page = sublinks.find((link) => link.pageId === pageID)
-  console.log(page)
+  const {pageId} = useGlobalContext()
+  const currentPage = sublinks.find((item => item.pageId === pageId))
+  console.log(currentPage)
   return (
-    <div className="submenu1">
-        <h5>{page?.page}</h5>
-        <div className="submenu-links" style={{gridTemplateColumns:page?.links?.length> 3 ? '1fr 1fr' : '1fr'}}>
-         
-
+    <div className="submenu">
+        <h5>{currentPage?.page}</h5>
+        <div className="submenu-links" style={{gridTemplateColumns:currentPage?.links?.length> 3 ? '1fr 1fr' : '1fr'
+        }}
+        >
+          {currentPage?.links.map(link => {
+            const {id,label,icon,url} = link
+            return(
+              <a key={id} href={url}>
+                {icon}
+                {label}
+              </a>
+            )
+          })}
+        </div>
     </div>
   )
 }
