@@ -8,7 +8,7 @@ const Submenu = () => {
   const currentPage = sublinks.find((item => item.pageId === pageId))
   console.log(currentPage)
   return (
-    <div className="submenu">
+    <div className={currentPage ? "submenu show-submenu" : "submenu"}>
         <h5>{currentPage?.page}</h5>
         <div className="submenu-links" style={{gridTemplateColumns:currentPage?.links?.length> 3 ? '1fr 1fr' : '1fr'
         }}
