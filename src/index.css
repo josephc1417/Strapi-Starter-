@@ -497,11 +497,13 @@ conditional chaining  with the media query */
     opacity: 0;
     transition:transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
     visibility:hidden;
+    z-index:-1;
   }
   .show-submenu{
     visibility:visible;
     opacity: 1;
     transform:rotateX(0deg) translateX(-50%);
+    z-index:1;
   }
 
   .submenu h5{
